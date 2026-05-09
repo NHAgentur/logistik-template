@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
+/* Tailwind v4 design tokens — equivalent of tailwind.config theme.extend.colors. */
 @theme {
-  --color-accent: oklch(0.74 0.18 55);
-  --color-accent-fg: oklch(0.18 0.02 250);
+  --color-bg: #09090b;        /* zinc-950 — page background */
+  --color-primary: #fafafa;   /* zinc-50  — primary foreground */
+  --color-accent: #1e3a8a;    /* deep cobalt — brand accent */
+  --color-accent-fg: #fafafa; /* foreground used on accent surfaces */
 }
 
 html,
@@ -11,8 +14,8 @@ body {
 }
 
 body {
-  background-color: #09090b;
-  color: #fafafa;
+  background-color: var(--color-bg);
+  color: var(--color-primary);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
